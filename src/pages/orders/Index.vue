@@ -116,7 +116,7 @@
       this.mixTableData = Object.assign(this.mixTableData, {
         queryIntros: [{
           control: 'input',
-          key: 'q_symbol_cont',
+          key: 'q_trade_symbol_base_currency_cont',
           placeholder: '币种'
         }, {
           control: 'custom',
