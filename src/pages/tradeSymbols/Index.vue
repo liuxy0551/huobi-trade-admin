@@ -64,8 +64,14 @@
           label: '是否可用',
           key: 'enabled'
         }, {
+          label: '创建时间',
+          key: 'created_time',
+          sortable: 'created_at',
+          width: 160
+        }, {
           label: '更新时间',
-          key: 'updated_time'
+          key: 'updated_time',
+          width: 160
         }],
         opIntro: {
           label: '操作',
