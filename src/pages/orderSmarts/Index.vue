@@ -3,7 +3,7 @@
     <ex-table :tableData="mixTableData" @refetch="fetchData">
       <template slot="search-bar-item" slot-scope="{search}">
         <el-form-item :label="search.label" :key="search.key" v-if="search.key == 'q_balance_smart_id_eq'">
-          <ex-model-select v-model="mixTableData.query[search.key]" api="/v1/balance_smarts" clearable labelKey="full_coin_name" placeholder="交易对"></ex-model-select>
+          <ex-model-select v-model="mixTableData.query[search.key]" api="/v1/balance_smarts" clearable labelKey="full_coin_name" labelKeySearch="trade_symbol_base_currency" placeholder="交易对"></ex-model-select>
         </el-form-item>
         <el-form-item :label="search.label" :key="search.key" v-if="search.key == 'q_status_in_any'">
           <ex-options-select v-model="mixTableData.query[search.key]" :clearable="true"

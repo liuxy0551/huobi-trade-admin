@@ -31,7 +31,7 @@
       <template slot="status" slot-scope="{row}">
         <ex-status-tag v-if="row.status == 'status_created'">已提交</ex-status-tag>
         <ex-status-tag type="success" v-if="row.status == 'status_filled'">已成交</ex-status-tag>
-        <ex-status-tag type="success" v-if="row.status == 'status_finished'">完成交易</ex-status-tag>
+        <ex-status-tag type="info" v-if="row.status == 'status_finished'">完成交易</ex-status-tag>
         <ex-status-tag type="info" v-if="row.status == 'status_untracked'">停止追踪</ex-status-tag>
         <ex-status-tag type="danger" v-if="row.status == 'status_canceled'">已取消</ex-status-tag>
       </template>
@@ -116,7 +116,7 @@
       this.mixTableData = Object.assign(this.mixTableData, {
         queryIntros: [{
           control: 'input',
-          key: 'q_symbol_cont',
+          key: 'q_trade_symbol_base_currency_cont',
           placeholder: '币种'
         }, {
           control: 'custom',
